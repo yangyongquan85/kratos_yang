@@ -185,7 +185,7 @@ add_filter('get_avatar', 'get_https_avatar');
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://theme.yangyq.net/update.json',
     get_template_directory() . '/functions.php',
-    'Kratos'
+    'Kratos_Yang'
 );
 
 // 禁止生成多种尺寸图片
