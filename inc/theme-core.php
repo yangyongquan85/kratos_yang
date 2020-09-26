@@ -183,7 +183,7 @@ add_filter('get_avatar', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://cdn.jsdelivr.net/gh/vtrois/kratos/inc/update-checker/update.json',
+    'https://theme.yangyq.net/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
