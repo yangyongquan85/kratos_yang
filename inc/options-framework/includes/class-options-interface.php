@@ -220,38 +220,7 @@ class Options_Framework_Interface
                         $output .= $value['desc'] . "\n";
                     }
                     $output .= '</div>' . "\n";
-                    break;
-
-                case "about":
-                    global $wp_version;
-                    $version = $wp_version;
-                    $output .= '<div class="about-content">
-					<img src="' . ASSET_PATH . '/assets/img/options/about.png">
-					<h4>' . __('基础信息', 'kratos') . '</h4>
-					<ul>
-						<li>' . __('PHP 版本：', 'kratos') . PHP_VERSION . '</li>
-						<li>' . __('Kratos 版本：', 'kratos') . THEME_VERSION . '</li>
-						<li>' . __('WordPress 版本：', 'kratos') . $version . '</li>
-						<li>' . __('User Agent 信息：', 'kratos') . $_SERVER['HTTP_USER_AGENT'] . '</li>
-					</ul>
-					<p class="notices">' . __('提示：在提交主题相关问题反馈时，请将上面「基础信息」中的内容复制到环境信息中。', 'kratos') . '</p>
-					<h4>' . __('资料文档', 'kratos') . '</h4>
-					<ul>
-						<li>' . __('说明文档：', 'kratos') . '<a href="https://www.vtrois.com/" target="_blank">https://www.vtrois.com/</a></li>
-						<li>' . __('代码托管：', 'kratos') . '<a href="https://github.com/vtrois/kratos" target="_blank">https://github.com/vtrois/kratos</a></li>
-						<li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/issues" target="_blank">https://github.com/vtrois/kratos/issues</a></li>
-						<li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/vtrois/kratos/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">https://github.com/vtrois/kratos/wiki</a></li>
-						<li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li>
-					</ul>
-                    <h4>' . __('讨论交流', 'kratos') . '</h4>
-                    <img src="' . ASSET_PATH . '/assets/img/options/discuss.png">
-					<h4>' . __('版权声明', 'kratos') . '</h4>
-					<p>' . __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/master/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
-					<h4>' . __('打赏支持', 'kratos') . '</h4>
-					<img src="' . ASSET_PATH . '/assets/img/options/donate.png">
-				    </div>';
-                    break;
-
+                    break;               
                 case "sendmail":
                     $output .= '<input type="submit" name="sendmail" class="button-secondary" value="' . __('测试邮件', 'kratos') . '">';
                     break;
