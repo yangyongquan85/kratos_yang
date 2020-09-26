@@ -725,15 +725,5 @@ function kratos_options()
         'class' => 'hidden',
         'type' => 'text',
     );
-
-    $options[] = array(
-        'name' => __('关于主题', 'kratos'),
-        'type' => 'heading',
-    );
-
-    $options[] = array(
-        'type' => 'about',
-    );
-
     return $options;
 }
