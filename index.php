@@ -38,7 +38,7 @@ get_header(); ?>
                 pagelist();
                 wp_reset_query(); ?>
             </div>
-            <div class="col-lg-4 sidebar d-none d-lg-block">
+            <div class="col-lg-4 sidebar d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
             </div>
         </div>
