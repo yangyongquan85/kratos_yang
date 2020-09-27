@@ -63,7 +63,19 @@ function kratos_options()
         'id' => 'g_icon',
         'type' => 'upload',
     );
-
+$options[] = array(
+        'name' => __('是否添加国旗', 'kratos'),
+        'desc' => __('在页脚添加国旗', 'kratos'),
+        'std' => '0',
+        'id' => 'g_flag',
+        'type' => 'checkbox',
+    );
+    $options[] = array(
+        'name' => __('国旗地址', 'kratos'),
+        'desc' => __('选择国旗图片地址', 'kratos'),
+        'id' => 'g_flag_url',
+        'type' => 'upload',
+    );
     $options[] = array(
         'name' => __('背景颜色', 'kratos'),
         'desc' => __('全站页面的背景颜色，需填写十六进制颜色码', 'kratos'),
@@ -103,7 +115,6 @@ function kratos_options()
         'type' => 'checkbox',
     );
 
-  
 
     $options[] = array(
         'name' => __('禁止生成缩略图', 'kratos'),
@@ -113,7 +124,7 @@ function kratos_options()
         'type' => 'checkbox',
     );
 
-   
+
     $options[] = array(
         'name' => __('Gutenberg 编辑器', 'kratos'),
         'desc' => __('开启 Gutenberg 编辑器', 'kratos'),
@@ -429,164 +440,6 @@ function kratos_options()
         'type' => 'heading',
     );
 
-    $options[] = array(
-        'name' => __('选择需要开启的社交图标', 'kratos'),
-        'desc' => __('国内平台', 'kratos'),
-        'type' => 'info',
-    );
-
-    $options[] = array(
-        'desc' => __('新浪微博', 'kratos'),
-        'id' => 's_sina',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_sina_url',
-        'placeholder' => __('例如：https://weibo.com/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('哔哩哔哩', 'kratos'),
-        'id' => 's_bilibili',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_bilibili_url',
-        'placeholder' => __('例如：https://space.bilibili.com/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('CODING', 'kratos'),
-        'id' => 's_coding',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_coding_url',
-        'placeholder' => __('例如：https://xxxxx.coding.net/u/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('码云 Gitee', 'kratos'),
-        'id' => 's_gitee',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_gitee_url',
-        'placeholder' => __('例如：https://gitee.com/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('海外平台', 'kratos'),
-        'type' => 'info',
-    );
-
-    $options[] = array(
-        'desc' => __('Twitter', 'kratos'),
-        'id' => 's_twitter',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_twitter_url',
-        'placeholder' => __('例如：https://twitter.com/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('Telegram', 'kratos'),
-        'id' => 's_telegram',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_telegram_url',
-        'placeholder' => __('例如：https://t.me/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('LinkedIn', 'kratos'),
-        'id' => 's_linkedin',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_linkedin_url',
-        'placeholder' => __('例如：https://www.linkedin.com/in/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('YouTube', 'kratos'),
-        'id' => 's_youtube',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_youtube_url',
-        'placeholder' => __('例如：https://www.youtube.com/channel/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('Github', 'kratos'),
-        'id' => 's_github',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_github_url',
-        'placeholder' => __('例如：https://github.com/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('Stack Overflow', 'kratos'),
-        'id' => 's_stackflow',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_stackflow_url',
-        'placeholder' => __('例如：https://stackoverflow.com/users/xxxxx', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'desc' => __('其他', 'kratos'),
-        'type' => 'info',
-    );
-
-    $options[] = array(
-        'desc' => __('电子邮箱', 'kratos'),
-        'id' => 's_email',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'id' => 's_email_url',
-        'placeholder' => __('例如：mailto:xxxxx@gmail.com', 'kratos'),
-        'class' => 'hidden',
-        'type' => 'text',
-    );
 
     $options[] = array(
         'name' => __('工信部备案信息', 'kratos'),
@@ -661,5 +514,7 @@ function kratos_options()
         'class' => 'hidden',
         'type' => 'text',
     );
+
+
     return $options;
 }
