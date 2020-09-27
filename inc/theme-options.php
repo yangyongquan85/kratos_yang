@@ -257,28 +257,6 @@ function kratos_options()
         'type' => 'heading',
     );
 
-    $options[] = array(
-        'name' => __('知识共享协议', 'kratos'),
-        'desc' => __('开启文章知识共享协议', 'kratos'),
-        'id' => 'g_cc_switch',
-        'type' => 'checkbox',
-    );
-
-    $options[] = array(
-        'desc' => __('选择文章的知识共享协议', 'kratos'),
-        'id' => 'g_cc',
-        'std' => 'one',
-        'type' => 'select',
-        'class' => 'hidden',
-        'options' => $cc_array,
-    );
-
-    $options[] = array(
-        'name' => __('网易云音乐', 'kratos'),
-        'desc' => __('开启网易云音乐自动播放', 'kratos'),
-        'id' => 'g_163mic',
-        'type' => 'checkbox',
-    );
 
     $options[] = array(
         'name' => __('文章打赏', 'kratos'),
